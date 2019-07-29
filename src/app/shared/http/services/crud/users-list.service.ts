@@ -8,10 +8,10 @@ export class UsersListService {
 
   public url = 'http://localhost:4200/api/';
 
-  constructor(private http: HttpClientModule, private httpGetList: ApiGetListService) {
+  constructor(private http: HttpClientModule, ) {
   }
 
   get(url: string, options: any) {
-    this.httpGetList.getList(url, this.url + 'users',options,'');
+    // this.httpGetList.getList(url, this.url + 'users',options,'');
   }
 }

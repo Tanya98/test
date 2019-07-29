@@ -1,6 +1,6 @@
-import {Observable} from "rxjs";
+import { Observable } from "rxjs";
 
-export interface ApiGetListService<TGetListRequest,TGetListResponse> {
+export interface ApiGetListService<TGetListRequest, TGetListResponse> {
 
-  getList(request:TGetListRequest):Observable<TGetListResponse>;
+  getList(request: TGetListRequest): Observable<TGetListResponse>;
 }

@@ -1,4 +1,4 @@
-export class UserDeleteViewModel {
+export class UserListItemModel {
     public id: number;
     public firstName: string;
     public lastName: string;

@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {InMemoryDbService} from "angular-in-memory-web-api";
-import {UserCreateModel} from "../../domaim/user/create/user-create.model";
+import { Injectable } from '@angular/core';
+import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { UserCreateModel } from '../../domaim/user/create/user-create.model';
 
 @Injectable()
 export class InMemoryDataService implements InMemoryDbService {
@@ -43,7 +43,7 @@ export class InMemoryDataService implements InMemoryDbService {
         role: 'patient'
       }
     ];
-    return {users}
+    return { users };
   }
 }
 

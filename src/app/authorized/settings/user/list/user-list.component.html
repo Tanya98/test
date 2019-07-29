@@ -1,0 +1,8 @@
+<div class="container">
+    <ul class="list" *ngIf="(usersList$|async) as usersList; else preolder">
+        <ng-container *ngFor="let item of usersList">
+            <p>{{item.email}}</p>
+        </ng-container>
+    </ul>
+</div>
+<ng-template #preolder></ng-template>
