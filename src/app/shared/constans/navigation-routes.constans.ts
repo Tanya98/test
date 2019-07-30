@@ -8,12 +8,12 @@ export const NavigationRoutes = {
         Details(entityId: number): string {
             return `users/${entityId}`;
         },
-        Edit(entityId: number): string {
-            return `users/${entityId}`;
-        },
-        Create(user: UserCreateModel): string {
-          debugger;
+        Edit(user): string {
             return `users/${user.id}`;
+        },
+        Create(): string {
+        //   debugger;
+            return `users`;
         },
         Delete(entityId: number): string {
             return `users/${entityId}`;

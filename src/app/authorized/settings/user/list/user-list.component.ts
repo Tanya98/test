@@ -16,18 +16,18 @@ export class UserListComponent<UserListResponse, UserListItemViewModel> implemen
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.usersList$ = this.userService.getList();
+    // this.usersList$ = this.userService.getList();
   }
 
-  delete(value) {
-    debugger;
-    let id: number = parseInt(value.id);
-    this.userService.deleteUser(id);
-  }
+  // delete(value) {
+  //   debugger;
+  //   let id: number = parseInt(value.id);
+  //   this.userService.deleteUser(id);
+  // }
 
-  edit(value) {
-    debugger;
-    return this.userService.subject.next(value);
-  }
+  // edit(value) {
+  //   // debugger;
+  //   // return this.userService.subject.next(value);
+  // }
 }
 

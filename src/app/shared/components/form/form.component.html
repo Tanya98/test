@@ -1,3 +1,4 @@
+<div class="block">
 <div class="container">
   <div class="form" [formGroup]='form'>
     <div class="block">
@@ -26,8 +27,22 @@
     </div>
 
     <div class="block-buttons">
-      <button class="but" (click)="add(form.value)">Add</button>
-      <button class="but" (click)="edit(form.value)">Edit</button>
+      <button class="but" (click)="add()">Add</button>
+      <button class="but" (click)="update(form.value)">Edit</button>
     </div>
   </div>
+</div>
+
+<div class="block-list">
+  <p class="title">Users List</p>
+  <ul class="list" *ngIf="usersList; else preolder">
+    <ng-container *ngFor="let item of usersList">
+      <li>{{item.email}}
+        <span class="but-delete"(click)="delete(item)">X</span>
+      <span class="but-edit" (click)="edit(item)">edit</span>
+      </li>
+    </ng-container>
+  </ul>
+</div>
+<ng-template #preolder></ng-template>
 </div>
