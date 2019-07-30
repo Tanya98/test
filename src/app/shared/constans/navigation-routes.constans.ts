@@ -12,7 +12,8 @@ export const NavigationRoutes = {
             return `users/${entityId}`;
         },
         Create(user: UserCreateModel): string {
-            return `users/${user}`;
+          debugger;
+            return `users/${user.id}`;
         },
         Delete(entityId: number): string {
             return `users/${entityId}`;

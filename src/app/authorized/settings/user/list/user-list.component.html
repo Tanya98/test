@@ -1,8 +1,12 @@
 <div class="container">
-    <ul class="list" *ngIf="(usersList$|async) as usersList; else preolder">
-        <ng-container *ngFor="let item of usersList">
-            <p>{{item.email}}</p>
-        </ng-container>
-    </ul>
+  <p class="title">Users List</p>
+  <ul class="list" *ngIf="(usersList$|async) as usersList; else preolder">
+    <ng-container *ngFor="let item of usersList">
+      <li>{{item.email}}
+        <span class="but-delete"(click)="delete(item)">X</span>
+      <span class="but-edit" (click)="edit(item)">edit</span>
+      </li>
+    </ng-container>
+  </ul>
 </div>
 <ng-template #preolder></ng-template>

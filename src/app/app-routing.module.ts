@@ -5,20 +5,15 @@ import { FormComponent } from './shared/components/form/form.component';
 import {UserListModule} from './authorized/settings/user/list/user-list.module';
 
 const routes: Routes = [
-
-  // {
-  //   path: '',
-  //   component: FormComponent,
-  // },
   {
     path: '',
     component: PublicLayoutComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: './authorized/settings/user/list/user-list.module#UserListModule',
-      }
-    ]
+    // children: [
+    //   {
+    //     path: '',
+    //     loadChildren: './authorized/settings/user/list/user-list.module#UserListModule',
+    //   }
+    // ]
   }
 
 ];

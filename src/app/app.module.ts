@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -11,11 +11,12 @@ import {SharedModule} from './shared/shared.module';
 import { PublicLayoutComponent } from './authorized/settings/public-layout/public-layout.components';
 import { UserService } from './shared/http/services/user.service';
 import { HttpService } from './shared/http/services/http.service';
-
+import {UserListComponent} from './authorized/settings/user/list/user-list.component'
 @NgModule({
   declarations: [
     AppComponent,
     PublicLayoutComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,8 @@ import { HttpService } from './shared/http/services/http.service';
     SharedModule
   ],
   providers: [UserService, HttpService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
 }

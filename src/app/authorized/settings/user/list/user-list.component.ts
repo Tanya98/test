@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/shared/http/services/user.service';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from 'src/app/shared/http/services/user.service';
+import {BehaviorSubject, Observable} from 'rxjs';
 
 @Component({
   selector: 'app-user-list',
@@ -12,11 +11,23 @@ import { map } from 'rxjs/operators';
 export class UserListComponent<UserListResponse, UserListItemViewModel> implements OnInit {
 
   public usersList$: Observable<any>;
-  public usersList;
-  constructor(private userService: UserService) { }
+
+
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
     this.usersList$ = this.userService.getList();
+  }
+
+  delete(value) {
+    debugger;
+    let id: number = parseInt(value.id);
+    this.userService.deleteUser(id);
+  }
+
+  edit(value) {
+    debugger;
+    return this.userService.subject.next(value);
   }
 }
 

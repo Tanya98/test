@@ -1,5 +1,36 @@
 .container {
+  margin-top: 40px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+      padding: 12px;
+      font-size: 18px;
+      font-weight: 500;
+
+      .but-delete {
+        font-size: 18px;
+        font-weight: 500;
+        background: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .title {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
 }

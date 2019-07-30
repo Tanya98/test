@@ -8,8 +8,8 @@ import { userslistModuleRoutes } from './user-list.routing';
     CommonModule,
     userslistModuleRoutes,
   ],
-  exports: [UserListComponent],
-  declarations: [UserListComponent],
+  // exports: [UserListComponent],
+  // declarations: [UserListComponent],
   providers: [],
 })
 export class UserListModule {

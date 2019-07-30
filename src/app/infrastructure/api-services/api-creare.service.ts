@@ -1,6 +1,6 @@
 import {Observable} from "rxjs";
 
-export interface ApiCreareService<TCreateRequest,TCreateResponse> {
+export interface ApiCreateService<TCreateRequest,TCreateResponse> {
 
   create(request: TCreateRequest):Observable<TCreateResponse>;
 }

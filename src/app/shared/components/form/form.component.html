@@ -1,23 +1,33 @@
 <div class="container">
-  <div class="form">
-    <label>Id</label>
-    <input type="text" placeholder="Enter id">
+  <div class="form" [formGroup]='form'>
+    <div class="block">
+      <label>Id</label>
+      <input type="text" placeholder="Enter id" #id formControlName="id">
+    </div>
 
-    <label>FirstName</label>
-    <input type="text" placeholder="Enter firstName">
+    <div class="block">
+      <label>FirstName</label>
+      <input type="text" placeholder="Enter firstName" #firstname formControlName="firstName">
+    </div>
 
-    <label>LastName</label>
-    <input type="text" placeholder="Enter lastName">
+    <div class="block">
+      <label>LastName</label>
+      <input type="text" placeholder="Enter lastName" #lastname formControlName="lastName">
+    </div>
 
-    <label>Email</label>
-    <input type="text" placeholder="Enter email">
+    <div class="block">
+      <label>Email</label>
+      <input type="text" placeholder="Enter email" #email formControlName="email">
+    </div>
 
-    <label>Role</label>
-    <input type="text" placeholder="Enter role">
+    <div class="block">
+      <label>Role</label>
+      <input type="text" placeholder="Enter role" #role formControlName="role">
+    </div>
 
-    <div class="block-buttins">
-      <button class="but" (click)="add()">Add</button>
-      <button class="but" (click)="edit()">Edit</button>
+    <div class="block-buttons">
+      <button class="but" (click)="add(form.value)">Add</button>
+      <button class="but" (click)="edit(form.value)">Edit</button>
     </div>
   </div>
 </div>
